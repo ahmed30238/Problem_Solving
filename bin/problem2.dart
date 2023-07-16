@@ -34,7 +34,21 @@ int b[3]: Bob's challenge rating
  */
 
 class ProblemBSolution {
-  static List<int> compareTriplets(List<int> a, List<int> b) {
-    return [];
+  static List<int> compareTriplets(List<int> alice, List<int> bob) {
+    int aScore = 0;
+    int bScore = 0;
+    alice.length = 3;
+    bob.length = 3;
+    List<int> result = [];
+    for (int i = 0; i < alice.length; i++) {
+      if (alice[i] < bob[i]) {
+        bScore += 1;
+      } else if(alice[i] > bob[i]){
+        aScore += 1;
+      }
+      result = [aScore, bScore];
+    }
+
+    return result;
   }
 }
