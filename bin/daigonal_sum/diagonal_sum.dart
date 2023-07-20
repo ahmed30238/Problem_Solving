@@ -58,27 +58,59 @@ Difference: |4 - 19| = 15
 Note: |x| is the absolute value of x
  */
 void main() {
-  print(DiagonalDifference.diagonalDifference([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-  ]));
+  print(DiagonalDifference.diagonalDifference(
+    [
+      [1, 2, 11],
+      [4, 5, 6],
+      [7, 8, 9],
+    ],
+  ));
 }
 
+/**
+ * right to left result
+ * ex: sum => (i=0,m=0) + (i=1,m=1) + (i=3, m=3)
+ */
+// i => rows
+// m => cols
 class DiagonalDifference {
   static diagonalDifference(List<List<int>> arr) {
     var matrixLength = 3;
     var rightToLeftResult = 0;
-    var LeftToRightResult = 50;
+    var LeftToRightResult = 0;
     var absResult = 0;
     for (int i = 0; i < matrixLength; i++) {
       for (int m = 0; m < matrixLength; m++) {
-        rightToLeftResult += arr[i][m];
-        print(arr[i][m]);
+        if (i == m) {
+          rightToLeftResult += arr[i][m];
+        }
       }
     }
-    print(rightToLeftResult);
+
+    /*
+
+    left to right  
+      
+ ex:   sum => (i=0,m=2), (i=1, m=1), (i=2,m0)
+
+
+3-1-0;  3-1-1; 3-1-2
+    length - 1 - i
+
+    m >= 0
+
+     */
+    for (int i = 0; i < matrixLength; i++) {
+      for (int m = matrixLength - 1 - i; m >= 0;) {
+        print(arr[i][m]);
+        LeftToRightResult += arr[i][m];
+        break;
+      }
+    }
+
+    print("left to right ${LeftToRightResult}");
+    print("right to left ${rightToLeftResult}");
     absResult = (rightToLeftResult - LeftToRightResult).abs();
-    print(absResult);
+    print("abs result ${absResult}");
   }
 }
