@@ -88,17 +88,11 @@ class DiagonalDifference {
     }
 
     /*
-
     left to right  
-      
- ex:   sum => (i=0,m=2), (i=1, m=1), (i=2,m0)
-
-
-3-1-0;  3-1-1; 3-1-2
+    ex:   sum => (i=0,m=2), (i=1, m=1), (i=2,m0)
+    3-1-0;  3-1-1; 3-1-2
     length - 1 - i
-
     m >= 0
-
      */
     for (int i = 0; i < matrixLength; i++) {
       for (int m = matrixLength - 1 - i; m >= 0;) {
