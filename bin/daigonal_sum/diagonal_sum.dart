@@ -57,3 +57,28 @@ Difference: |4 - 19| = 15
 
 Note: |x| is the absolute value of x
  */
+void main() {
+  print(DiagonalDifference.diagonalDifference([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ]));
+}
+
+class DiagonalDifference {
+  static diagonalDifference(List<List<int>> arr) {
+    var matrixLength = 3;
+    var rightToLeftResult = 0;
+    var LeftToRightResult = 50;
+    var absResult = 0;
+    for (int i = 0; i < matrixLength; i++) {
+      for (int m = 0; m < matrixLength; m++) {
+        rightToLeftResult += arr[i][m];
+        print(arr[i][m]);
+      }
+    }
+    print(rightToLeftResult);
+    absResult = (rightToLeftResult - LeftToRightResult).abs();
+    print(absResult);
+  }
+}
