@@ -75,6 +75,7 @@ void main() {
 // m => cols
 class DiagonalDifference {
   static diagonalDifference(List<List<int>> arr) {
+    //todo use stdin instead;
     var matrixLength = 3;
     var rightToLeftResult = 0;
     var LeftToRightResult = 0;
