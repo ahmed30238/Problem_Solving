@@ -2,11 +2,14 @@
 
 import 'dart:core';
 
+import 'array_sum/array_sum.dart';
+import 'very_big_sum/very_big.dart';
+
 void main(List<String> arguments) {
   // int x = 55;
   // print(x.toString().length);
   // print("the very big result is ${VeryBigArraySum.aVeryBigSumMethod([
-  //       BigInt.parse("50000000 00000000000000"),
+  //       BigInt.parse("5000000000000000000000"),
   //       BigInt.parse("5000000000000000000000"),
   //       BigInt.parse("5000000000000000000000"),
   //       BigInt.parse("5000000000000000000000"),

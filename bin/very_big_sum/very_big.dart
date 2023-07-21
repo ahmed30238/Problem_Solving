@@ -41,10 +41,10 @@ When we add several integer values, the resulting sum might exceed the above ran
 class VeryBigArraySum {
   BigInt x = BigInt.parse("100000000000000000000000000000000");
 
- static BigInt aVeryBigSumMethod(List<BigInt> array) {
+  static BigInt aVeryBigSumMethod(List<BigInt> array) {
     BigInt result = BigInt.parse("0");
     for (int i = 0; i < array.length; i++) {
-      result += array[i];
+      result = array.reduce((value, element) => value + element);
     }
 
     return result;
