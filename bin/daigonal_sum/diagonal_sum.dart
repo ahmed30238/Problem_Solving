@@ -1,3 +1,5 @@
+import 'dart:io';
+
 /**
  * Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 
@@ -58,13 +60,17 @@ Difference: |4 - 19| = 15
 Note: |x| is the absolute value of x
  */
 void main() {
-  print(DiagonalDifference.diagonalDifference(
-    [
-      [1, 2, 11],
-      [4, 5, 6],
-      [7, 8, 9],
-    ],
-  ));
+  // print(DiagonalDifference.diagonalDifference(
+  //   [
+  //     [11, 2, 4],
+  //     [4, 5, 6],
+  //     [10, 8, -12],
+  //   ],
+  // ));
+  print("Enter x ");
+  // var x = int.parse(stdin.readLineSync()!);
+  var x = 6;
+  print("This is x plus 5 ${x + 5}");
 }
 
 /**
@@ -107,5 +113,32 @@ class DiagonalDifference {
     print("right to left ${rightToLeftResult}");
     absResult = (rightToLeftResult - LeftToRightResult).abs();
     print("abs result ${absResult}");
+    return absResult;
   }
+/*
+  void methodInJava(List<List<int>> arr) {
+    int result = 0;
+    int sum1 = 0, sum2 = 0;
+
+    for (int i = 0; i < arr.size(); i++) {
+      sum1 += arr.get(i).get(i);
+    }
+
+    for (int i = arr.size() - 1; i >= 0; i--) {
+      sum2 += arr.get(i).get(arr.size() - 1 - i);
+    }
+
+    result = Math.abs(sum1 - sum2);
+
+    return result;
+  }
+
+Explanation:
+
+sum1 is the sum of elements in the left-right diagonal. Each element of the left-right diagonal has the same row number and column number.
+
+sum2 is the sum of elements of the right-left diagonal. Each element of the right-left diagonal has the row number and column number such that: (Row Number + Column Number) = Order of matrix.
+
+
+  */
 }
