@@ -54,13 +54,13 @@ The staircase is right-aligned, composed of # symbols and spaces, and has a heig
 
 class Staircase {
   void staircase(int n) {
-    for (var i = 0; i < n; i++) {
-
-      
-      for (var j = 0; j < i; j++) {
-
+    for (int i = 1; i <= n; i++) {
+      for (int j = n - i; j > 0; j--) {
+        print(" ");
       }
-      
+      for (int j = 0; j < i; j++) {
+        print("#");
+      }
       print("\n");
     }
   }
