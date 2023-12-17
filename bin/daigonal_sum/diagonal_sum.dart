@@ -114,6 +114,8 @@ class DiagonalDifference {
     absResult = (rightToLeftResult - LeftToRightResult).abs();
     print("abs result ${absResult}");
     return absResult;
+
+
   }
 /*
   void methodInJava(List<List<int>> arr) {
@@ -141,4 +143,16 @@ sum2 is the sum of elements of the right-left diagonal. Each element of the righ
 
 
   */
+
+
+
+
+//   Widget h(StatusEnum state){
+//  return switch (state) {
+//     case value:
+      
+//       break;
+//     default:
+//   }
+// }
 }

@@ -55,6 +55,28 @@ The proportions of occurrence are positive: , negative:  and zeros: .
 
 class PlusMinus {
   void plusMinus(List<int> arr) {
-    // Write your code here
+    /*
+    هنا عايزين نلف علي العناصر اللي جوا الليسته ونشوف اذا كانت موجبه,سالبةاو صفر
+    */
+    int posNumbers = 0;
+    int negNumbers = 0;
+    int zeroNumbers = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > 0) {
+        posNumbers++;
+      } else if (arr[i] < 0) {
+        negNumbers++;
+      } else {
+        zeroNumbers++;
+      }
+    }
+
+    double posRatio = posNumbers / arr.length;
+    double negRatio = negNumbers / arr.length;
+    double zeroRatio = zeroNumbers / arr.length;
+    print("${(posRatio).toStringAsFixed(6)}");
+    print("${(negRatio).toStringAsFixed(6)}");
+    print("${(zeroRatio).toStringAsFixed(6)}");
   }
 }

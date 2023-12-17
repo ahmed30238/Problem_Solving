@@ -2,8 +2,11 @@
 
 import 'dart:core';
 
+import 'plus_minus/plus_minus.dart';
 
 void main(List<String> arguments) {
+  PlusMinus plusMinus = PlusMinus();
+  plusMinus.plusMinus([-4, 3, -9, 0, 4, 1]);
   // int x = 55;
   // print(x.toString().length);
   // print("the very big result is ${VeryBigArraySum.aVeryBigSumMethod([
