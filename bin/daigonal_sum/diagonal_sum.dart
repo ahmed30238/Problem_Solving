@@ -1,5 +1,6 @@
 
 
+// ignore: slash_for_doc_comments
 /**
  * Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 
@@ -73,10 +74,8 @@ void main() {
   print("This is x plus 5 ${x + 5}");
 }
 
-/**
- * right to left result
- * ex: sum => (i=0,m=0) + (i=1,m=1) + (i=3, m=3)
- */
+/// right to left result
+/// ex: sum => (i=0,m=0) + (i=1,m=1) + (i=3, m=3)
 // i => rows
 // m => cols
 class DiagonalDifference {

@@ -52,15 +52,27 @@ Explanation
 The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
  */
 
+
+import 'package:quick_log/quick_log.dart';
+
 class Staircase {
+  Logger logger = Logger("fgfg");
+  
   void staircase(int n) {
+    logger.fine("message");
+    // ex n = 5 ==> i = 1 ==> j = 5 - 1 = 4
+
     for (int i = 1; i <= n; i++) {
+      // Print spaces
       for (int j = n - i; j > 0; j--) {
-        print(" ");
+        logger.fine(" ");
       }
+      // Print #
       for (int j = 0; j < i; j++) {
-        print("#");
+        logger.fine("#");
       }
+
+      // Move to the next line
       print("\n");
     }
   }
