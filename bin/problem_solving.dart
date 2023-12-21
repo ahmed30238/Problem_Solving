@@ -1,10 +1,14 @@
 // import 'package:problem_solving/problem_solving.dart' as problem_solving;
 
 import 'dart:core';
-import 'candles/candles.dart';
-import 'mini_max_sum/mini_max_sum.dart';
+// import 'candles/candles.dart';
+// import 'mini_max_sum/mini_max_sum.dart';
+import 'time_conversion/time_conversion.dart';
 
 void main(List<String> arguments) {
+  TimeConversion timeConversion = TimeConversion();
+  print(timeConversion.timeConversion("07:05:45PM"));
+
   // BirthdayCandles birthdayCandles = BirthdayCandles();
   // print(birthdayCandles
   //     .birthDayCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36]));
