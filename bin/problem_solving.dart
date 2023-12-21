@@ -3,11 +3,22 @@
 import 'dart:core';
 // import 'candles/candles.dart';
 // import 'mini_max_sum/mini_max_sum.dart';
+import 'dijkstra_shortest_path/dijkstra_shortest_path.dart';
 import 'time_conversion/time_conversion.dart';
 
 void main(List<String> arguments) {
-  TimeConversion timeConversion = TimeConversion();
-  print(timeConversion.timeConversion("07:05:45PM"));
+  DijkstraShortestReach shortestReach = DijkstraShortestReach();
+  print(shortestReach.shortestReach(
+      4,
+      [
+        [1, 2, 24],
+        [1, 3, 3],
+        [1, 4, 15],
+        [4, 3, 12]
+      ],
+      1));
+  // TimeConversion timeConversion = TimeConversion();
+  // print(timeConversion.timeConversion("07:05:45PM"));
 
   // BirthdayCandles birthdayCandles = BirthdayCandles();
   // print(birthdayCandles
