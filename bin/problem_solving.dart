@@ -2,13 +2,21 @@
 
 import 'dart:core';
 import 'candles/candles.dart';
+import 'mini_max_sum/mini_max_sum.dart';
 
 void main(List<String> arguments) {
-  BirthdayCandles birthdayCandles = BirthdayCandles();
-  birthdayCandles.birthDayCandles([1, 2,4,4, 3, 4, 3, 3]);
+  // BirthdayCandles birthdayCandles = BirthdayCandles();
+  // print(birthdayCandles
+  //     .birthDayCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36]));
 
   // MiniMaxSum miniMaxSum = MiniMaxSum();
-  // miniMaxSum.miniMaxSum([9, 8, 7, 5, 4]);
+  // miniMaxSum.miniMaxSum([
+  //   5,
+  //   5,
+  //   5,
+  //   5,
+  //   5,
+  // ]);
   // Staircase staircase = Staircase();
   // staircase.staircase(5);
   // PlusMinus plusMinus = PlusMinus();

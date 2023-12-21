@@ -26,18 +26,18 @@ class MiniMaxSum {
     arr.sort();
 
     for (var i = 0; i < arr.length - 1; i++) {
-      if (arr[i] < arr[i + 1]) {
+      if (arr[i] <= arr[i + 1]) {
         // here you can do it (sumOfBig += arr[i + 1]) directly without biggestNumbers List
         // but i prefer the listed way to keep the data
         biggestNumbers.add(arr[i + 1]);
       }
-      if (arr[i] < arr[i + 1]) {
+      if (arr[i] <= arr[i + 1]) {
         smallestNumbers.add(arr[i]);
       }
     }
-    biggestNumbers.forEach((element) {
+    for (var element in biggestNumbers) {
       sumOfBig += element;
-    });
+    }
     smallestNumbers.forEach((element) {
       sumOfSmall += element;
     });

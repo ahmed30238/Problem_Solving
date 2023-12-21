@@ -4,7 +4,7 @@
  ex => [4, 4, 1, 3]the maximum height candles are 4 units high, there are two of them, so return 2.
  */
 class BirthdayCandles {
-  void birthDayCandles(List<int> arr) {
+  int birthDayCandles(List<int> arr) {
     List<int> tallestCandles = [];
     arr.sort();
     // for (var i = arr.length - 1; i > 0; i--) {
@@ -31,6 +31,6 @@ class BirthdayCandles {
       }
       break;
     }
-    print(tallestCandles.length);
+    return tallestCandles.length;
   }
 }
