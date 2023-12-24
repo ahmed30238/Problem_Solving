@@ -5,10 +5,13 @@ import 'dart:core';
 // import 'mini_max_sum/mini_max_sum.dart';
 import 'apple_orange_problem/apple_orange_problem.dart';
 import 'grading_student/grading_student.dart';
+import 'kangaro/kangaro.dart';
 
 void main(List<String> arguments) {
-  AppleOrangeCounter appleOrangeCounter = AppleOrangeCounter();
-  appleOrangeCounter.countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
+  KangaroJump kangaroJump = KangaroJump();
+  print(kangaroJump.kangaro(2564, 5393, 5121, 2836));
+  // AppleOrangeCounter appleOrangeCounter = AppleOrangeCounter();
+  // appleOrangeCounter.countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
   // print(24 % 5);
   // GradingStudent gradingStudent = GradingStudent();
   // print(gradingStudent.gradingStudent([73, 67, 38, 33]));
