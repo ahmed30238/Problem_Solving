@@ -3,10 +3,13 @@
 import 'dart:core';
 // import 'candles/candles.dart';
 // import 'mini_max_sum/mini_max_sum.dart';
+import 'apple_orange_problem/apple_orange_problem.dart';
 import 'grading_student/grading_student.dart';
 
 void main(List<String> arguments) {
-  print(24 % 5);
+  AppleOrangeCounter appleOrangeCounter = AppleOrangeCounter();
+  appleOrangeCounter.countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
+  // print(24 % 5);
   // GradingStudent gradingStudent = GradingStudent();
   // print(gradingStudent.gradingStudent([73, 67, 38, 33]));
   // DijkstraShortestReach shortestReach = DijkstraShortestReach();
