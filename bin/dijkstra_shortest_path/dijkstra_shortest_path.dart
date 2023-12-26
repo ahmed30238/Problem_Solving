@@ -4,7 +4,6 @@ class DijkstraShortestReach {
 // s: the start node number
   List<int> shortestReach(int n, List<List<int>> edges, int s) {
     /// unreachable ==> -1
-    List<int> shortestPaths = [];
   
     /**
      [

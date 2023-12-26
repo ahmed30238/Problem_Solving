@@ -4,12 +4,14 @@ import 'dart:core';
 // import 'candles/candles.dart';
 // import 'mini_max_sum/mini_max_sum.dart';
 import 'apple_orange_problem/apple_orange_problem.dart';
+import 'between_two_sets/between_two_sets.dart';
 import 'grading_student/grading_student.dart';
 import 'kangaro/kangaro.dart';
 
 void main(List<String> arguments) {
-  KangaroJump kangaroJump = KangaroJump();
-  print(kangaroJump.kangaro(2564, 5393, 5121, 2836));
+  print(TwoSets.getTotalX([2, 4], [16, 32, 96]));
+  // KangaroJump kangaroJump = KangaoJump();
+  // print(kangaroJump.kangaro(2564, 5393, 5121, 2836));
   // AppleOrangeCounter appleOrangeCounter = AppleOrangeCounter();
   // appleOrangeCounter.countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
   // print(24 % 5);

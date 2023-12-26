@@ -1,15 +1,55 @@
+// import 'dart:math';
 
 class TwoSets {
+//     int leastCommonMultiple(int a, int b) {
+//   if ((a == 0) || (b == 0)) {
+//     return 0;
+//   }
+
+  // return ((a ~/ greatestCommonDivisor(a, b)) * b).abs();
+// }
   static int getTotalX(List<int> a, List<int> b) {
-    // Write your code here
-    return 0;
+    a.sort();
+    b.sort();
+    int start = a.last;
+    int end = b.first;
+    List<int> first = [];
+    List<int> myFinalList = [];
+    for (var i = start; i <= end; i += start) {
+      first.add(i);
+      for (var j = 0; j < a.length; j++) {
+        if (i % a[j] != 0) {
+          first.remove(i);
+        }
+      }
+    }
+    if (first.isNotEmpty) {
+      for (var i = 0; i < first.length; i++) {
+        myFinalList.add(first[i]);
+        for (var j = 0; j < b.length; j++) {
+          if (b[j] % first[i] != 0) {
+            myFinalList.remove(first[i]);
+          }
+        }
+      }
+    }
+    return myFinalList.length;
   }
 }
+//todo
+/**
+ * The elements of the first array are all factors of the integer being considered
+The integer being considered is a factor of all elements of the second array
+ */
 /**
  * There will be two arrays of integers. Determine all integers that satisfy the following two conditions:
 
-The elements of the first array are all factors of the integer being considered
-The integer being considered is a factor of all elements of the second array
+ ==> The elements of the first array are all factors of the integer being considered
+ [2,6] ==> العناصر اللي هنا عوامل للعدد الصحيح دا 
+ [12,24] ==> العدد الصحيح دا هو عامل لكل العناصر اللي هنا
+
+ ==> The integer being considered is a factor of all elements of the second array
+
 These numbers are referred to as being between the two arrays. Determine how many such numbers exist.
 
 Example
@@ -26,7 +66,7 @@ Complete the getTotalX function in the editor below. It should return the number
 getTotalX has the following parameter(s):
 
 int a[n]: an array of integers
-int b[m]: an array of integers
+int a[m]: an array of integers
 Returns
 
 int: the number of integers that are between the sets
