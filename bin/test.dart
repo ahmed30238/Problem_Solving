@@ -37,3 +37,30 @@ class DiagonalSum {
     print(rightToLeftSum);
   }
 }
+
+void main(List<String> args) {
+  print(BirthdayChocolate.birthday([1, 2, 1, 3, 2], 3, 2));
+}
+
+class BirthdayChocolate {
+  static int birthday(List<int> s, int d, int m) {
+    int counter = 0;
+    for (var i = 0; i < s.length; i++) {
+      int sum = 0;
+      int a = i;
+      int j = a + m;
+      while (a < s.length) {
+        if (a < j) {
+          sum += s[a];
+          a++;
+        } else {
+          break;
+        }
+      }
+      if (sum == d) {
+        counter++;
+      }
+    }
+    return counter;
+  }
+}

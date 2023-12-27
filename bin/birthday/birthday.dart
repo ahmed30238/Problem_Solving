@@ -1,15 +1,11 @@
 class Birthday {
   static int birthday(List<int> s, int d, int m) {
-    /// عايزين نشوف في الليسته هناخد كام قطعة شوكولا
-    /// (m)
-    /// الارقام اللي موجوده علي القطع مجموعها يكون بيساوي
-    /// (d)
     int counter = 0;
-    /// [1,2,1,3,2]
+    /// ex [1,2,1,3,2]
     for (var i = 0; i < s.length; i++) {
-      int a = i; // 0 ==> 4
-      int sum = 0; // 
-      int j = a + m; // 2 , 6
+      int a = i; 
+      int sum = 0; 
+      int j = a + m; 
       while (a < s.length) {
         if (a < j) {
           sum += s[a];
