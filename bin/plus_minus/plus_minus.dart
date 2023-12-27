@@ -75,8 +75,8 @@ class PlusMinus {
     double posRatio = posNumbers / arr.length;
     double negRatio = negNumbers / arr.length;
     double zeroRatio = zeroNumbers / arr.length;
-    print("${(posRatio).toStringAsFixed(6)}");
-    print("${(negRatio).toStringAsFixed(6)}");
-    print("${(zeroRatio).toStringAsFixed(6)}");
+    print((posRatio).toStringAsFixed(6)); // 6 ارقام بعد العلامه
+    print((negRatio).toStringAsFixed(6));
+    print((zeroRatio).toStringAsFixed(6));
   }
 }

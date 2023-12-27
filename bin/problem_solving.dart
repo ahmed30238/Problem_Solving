@@ -3,13 +3,12 @@
 import 'dart:core';
 // import 'candles/candles.dart';
 // import 'mini_max_sum/mini_max_sum.dart';
-import 'apple_orange_problem/apple_orange_problem.dart';
-import 'between_two_sets/between_two_sets.dart';
-import 'grading_student/grading_student.dart';
-import 'kangaro/kangaro.dart';
+import 'breaking_record/breaking_record.dart';
+
 
 void main(List<String> arguments) {
-  print(TwoSets.getTotalX([2, 4], [16, 32, 96]));
+  print(BreakingRecord.breakingRecords([10, 5, 20, 20, 4 ,5, 2, 25 ,1]));
+  // print(TwoSets.getTotalX([2, 4], [16, 32, 96]));
   // KangaroJump kangaroJump = KangaoJump();
   // print(kangaroJump.kangaro(2564, 5393, 5121, 2836));
   // AppleOrangeCounter appleOrangeCounter = AppleOrangeCounter();
