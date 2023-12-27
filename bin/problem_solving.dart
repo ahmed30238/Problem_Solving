@@ -3,11 +3,12 @@
 import 'dart:core';
 // import 'candles/candles.dart';
 // import 'mini_max_sum/mini_max_sum.dart';
+import 'birthday/birthday.dart';
 import 'breaking_record/breaking_record.dart';
 
-
 void main(List<String> arguments) {
-  print(BreakingRecord.breakingRecords([10, 5, 20, 20, 4 ,5, 2, 25 ,1]));
+  print(Birthday.birthday([1, 2, 1, 3, 2], 3, 2));
+  // print(BreakingRecord.breakingRecords([10, 5, 20, 20, 4 ,5, 2, 25 ,1]));
   // print(TwoSets.getTotalX([2, 4], [16, 32, 96]));
   // KangaroJump kangaroJump = KangaoJump();
   // print(kangaroJump.kangaro(2564, 5393, 5121, 2836));
