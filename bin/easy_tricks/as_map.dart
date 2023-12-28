@@ -7,7 +7,7 @@ void main() {
     "Tomatoe",
   ];
 
-  var map = fruits.map((e) => "I Love " + e).toList();
+  var map = fruits.map((e) => "I Love $e").toList();
   var asmap = fruits.asMap( );
 
   print(map);
