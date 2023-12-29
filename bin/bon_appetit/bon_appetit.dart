@@ -1,10 +1,18 @@
 //
 void main(List<String> args) {
-  BonAppetit.bonAppetit([3, 10, 2, 9], 1, 12);
+  BonAppetit.bonAppetit([3, 10, 2, 9], 1, 7);
 }
 
 class BonAppetit {
-  static void bonAppetit(List<int> bill, int k, int b) {}
+  static void bonAppetit(List<int> bill, int k, int b) {
+    bill.remove(bill[k]);
+    int annaTrueBill = bill.reduce((curr, next) => next + curr) ~/ 2;
+    if (annaTrueBill == b) {
+      print("Bon Appetit");
+    } else {
+      print(b - annaTrueBill);
+    }
+  }
 }
 
 /**
