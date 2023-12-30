@@ -1,14 +1,23 @@
 //
+
 void main(List<String> args) {
-  SocketMerchant.sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
+  // print((1~/2));
+  print(SocketMerchant.sockMerchant(9, [10, 10, 10, 10, 20, 20, 30, 50]));
 }
 
 class SocketMerchant {
   static int sockMerchant(int n, List<int> ar) {
-    int pairsNumber = 0;
-    List<int> possiblePairs = [];
+    int count = 0;
+    Map<int, int> itemCounts = {};
 
-    print(possiblePairs);
-    return pairsNumber;
+    for (int item in ar) {
+      itemCounts.update(item, (value) => value + 1, ifAbsent: () => 1);
+    }
+
+    for (int i in itemCounts.values) {
+      count += (i ~/ 2);
+    }
+    print(itemCounts);
+    return count;
   }
 }

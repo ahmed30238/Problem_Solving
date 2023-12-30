@@ -1,13 +1,4 @@
-// import 'dart:math';
-
 class TwoSets {
-//     int leastCommonMultiple(int a, int b) {
-//   if ((a == 0) || (b == 0)) {
-//     return 0;
-//   }
-
-  // return ((a ~/ greatestCommonDivisor(a, b)) * b).abs();
-// }
   static int getTotalX(List<int> a, List<int> b) {
     a.sort();
     b.sort();
