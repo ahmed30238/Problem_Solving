@@ -2,7 +2,7 @@
 import 'dart:math';
 
 void main(List<String> args) {
-  print(DrawingBook.pageCount(20, 11)); // ==> 1
+  print(DrawingBook.pageCount(271, 271)); // ==> 1
 }
 
 /// عندي كتاب بيبدا من صفحة 1 لحد
@@ -13,8 +13,9 @@ void main(List<String> args) {
 
 class DrawingBook {
   static int pageCount(int n, int p) {
-    int flipsFromFront = p ~/ 2;
-    int flipsFromEnd = (n ~/ 2) - flipsFromFront;
+    // ex 20, 11
+    int flipsFromFront = p ~/ 2; // from beggining to target 11~/2 = 5
+    int flipsFromEnd = (n ~/ 2) - flipsFromFront; // from beggining to the end of the book - from beggining to the target 20~/2 =10, 10 - 5 = 5
     print("from start $flipsFromFront from end $flipsFromEnd");
     return min(flipsFromFront, flipsFromEnd);
   }
