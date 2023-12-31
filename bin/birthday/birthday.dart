@@ -1,3 +1,8 @@
+//
+void main(List<String> args) {
+  print(Birthday.birthday([1, 2, 1, 3, 2], 3, 2));
+}
+
 class Birthday {
   static int birthday(List<int> s, int d, int m) {
     int counter = 0;

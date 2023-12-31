@@ -1,5 +1,4 @@
 // ignore: slash_for_doc_comments
-import 'package:quick_log/quick_log.dart';
 
 /**
  you have list of integer that you need to find the tallest number and how many of them then retun the number
@@ -14,7 +13,7 @@ class BirthdayCandles {
     // This is another solution
     Map<int, int> candles = {};
     int theValue = 0;
-    var theKey = 0;
+    // var theKey = 0;
     for (var element in arr) {
       candles.update(element, (value) => value + 1, ifAbsent: () => 1);
     }
@@ -22,7 +21,7 @@ class BirthdayCandles {
     candles.forEach((key, value) {
       if (value > theValue) {
         theValue = value;
-        theKey = key;
+        // theKey = key;
       }
     });
     return theValue;
