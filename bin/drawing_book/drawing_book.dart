@@ -2,7 +2,7 @@
 import 'dart:math';
 
 void main(List<String> args) {
-  print(DrawingBook.pageCount(271, 271)); // ==> 1
+  print(DrawingBook.pageCount(271, 271));
 }
 
 /// عندي كتاب بيبدا من صفحة 1 لحد
