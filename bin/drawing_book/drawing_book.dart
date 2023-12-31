@@ -13,9 +13,8 @@ void main(List<String> args) {
 
 class DrawingBook {
   static int pageCount(int n, int p) {
-    int flipsFromEnd = 0;
     int flipsFromFront = p ~/ 2;
-    flipsFromEnd = (n ~/ 2) - flipsFromFront;
+    int flipsFromEnd = (n ~/ 2) - flipsFromFront;
     print("from start $flipsFromFront from end $flipsFromEnd");
     return min(flipsFromFront, flipsFromEnd);
   }
