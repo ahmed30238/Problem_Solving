@@ -24,4 +24,23 @@ class MigratoryBirds {
     int id = typesCounter.indexOf(val) + 1;
     return id;
   }
+  // another solutino 
+  /**
+   *     Map<int, int> birdsCounter = {};
+
+    for (var i = 0; i < arr.length; i++) {
+      birdsCounter.update(arr[i], (value) => value + 1, ifAbsent: () => 1);
+    }
+    print(birdsCounter);
+    int theValue = 0;
+    int theKey = 0;
+    for (var bird in birdsCounter.entries) {
+      if (bird.value > theValue) {
+        theValue = bird.value;
+        theKey = bird.key;
+      }
+    }
+
+    return theKey;
+   */
 }

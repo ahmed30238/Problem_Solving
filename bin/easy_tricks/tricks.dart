@@ -1,3 +1,6 @@
+// import 'dart:math';
+Map<String, int> values = {"Ahmed": 23, "mayar": 26, "Tasnem": 16};
+
 class Person {
   final String name;
   final int age;
@@ -5,23 +8,19 @@ class Person {
   Person(this.name, this.age);
 }
 
-Map<String, int> values = {
-  "Ahmed": 23,
-  "mayar": 26,
-  "Tasnem": 16,
-};
+List<Person> persons = [
+  ...List.generate(
+      values.length,
+      (index) =>
+          values.entries.map((e) => Person(e.key, e.value)).toList()[index])
+];
+List<Person> list = values.entries.map((e) => Person(e.key, e.value)).toList();
+/// list equal persons with different syntax
+// Map<String, int> person = {for (var item in persons) item.name: item.age};
 
-List<Person> list = values.entries
-    .map((e) => Person(
-          e.key,
-          e.value,
-        ))
-    .toList();
-Map<String, int> map = {
-  for (var person in list) person.name: person.age,
-};
+
+Map<String, int> map = {for (var person in persons) person.name: person.age};
 
 void main() {
-  print(values);
-  print(map);
+  print(persons[1].name);
 }
