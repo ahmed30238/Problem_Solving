@@ -1,6 +1,7 @@
 //
 void main(List<String> args) {
-  print(SaveThePrisoner.saveThePrisoner(4, 6, 2));
+  print(SaveThePrisoner.saveThePrisoner(5,2,2));
+  // print(6.);
 }
 
 class SaveThePrisoner {
@@ -8,7 +9,7 @@ class SaveThePrisoner {
   /// m ==> candies
   /// s ==> init chair
   static int saveThePrisoner(int n, int m, int s) {
-    
+    return (s + m - 1) % n == 0 ? n : (s + m - 1) % n;
   }
 }
 /**
