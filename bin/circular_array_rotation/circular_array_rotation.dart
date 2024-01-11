@@ -1,5 +1,4 @@
 //
-import '../easy_tricks/tricks.dart';
 
 void main(List<String> args) {
   print(CircularArrayRotation.circularArrayRotation([1, 2, 3], 2, [0, 1, 2]));
@@ -10,7 +9,18 @@ class CircularArrayRotation {
   /// queries ==> indices to find element on a after rotation
   static List<int> circularArrayRotation(
       List<int> a, int k, List<int> queries) {
-  
+    List<int> values = [];
+    while (k > 0) {
+      int item = a.last;
+      a.remove(item);
+      a.insert(0, item);
+      k--;
+    }
+    for (var i = 0; i < queries.length; i++) {
+      values.add(a[queries[i]]);
+    }
+
+    return values;
   }
 }
 /**
