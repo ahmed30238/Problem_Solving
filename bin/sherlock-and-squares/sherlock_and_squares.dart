@@ -6,8 +6,14 @@ void main(List<String> args) {
 
 class SherlockAndSquares {
   static int squares(int a, int b) {
-  
-    // Write your code here
+    int counter = 0;
+    for (var i = a; i <= b; i++) {
+      if (i % sqrt(i) == 0) {
+        counter++;
+        print(i);
+      }
+    }
+    return counter;
   }
 }
 /**
