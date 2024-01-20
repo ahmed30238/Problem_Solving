@@ -1,3 +1,4 @@
+import 'dart:math';
 
 void main(List<String> args) {
   print(CutTheSticks.cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]));
@@ -9,7 +10,16 @@ void main(List<String> args) {
 
 class CutTheSticks {
   static List<int> cutTheSticks(List<int> arr) {
+    List<int> ans = [];
+    int low = 0;
 
+    while (arr.isNotEmpty) {
+      ans.add(arr.length);
+      low = arr.reduce(min);
+      arr.removeWhere((element) => element == low);
+    }
+
+    return ans;
   }
 }
 /**
