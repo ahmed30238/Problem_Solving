@@ -12,14 +12,6 @@ class JumpingOnClouds {
           position < c.length - k ? position + k : (k - (c.length - position));
     }
     energy -= c.first == 0 ? 1 : 3;
-    // for (var i = 0; i < c.length; i += k) {
-    //   print(i);
-    //   if (c[i] == 0) {
-    //     energy--;
-    //   } else {
-    //     energy -= 3;
-    //   }
-    // }
     return energy;
   }
 }
