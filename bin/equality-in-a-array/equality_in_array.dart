@@ -1,5 +1,33 @@
 void main(List<String> args) {
-  print(EqualityInArray.equalizeArray([10, 27, 9, 10, 100, 38, 30, 32, 45, 29, 27, 29, 32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63]));
+  print(EqualityInArray.equalizeArray([
+    10,
+    27,
+    9,
+    10,
+    100,
+    38,
+    30,
+    32,
+    45,
+    29,
+    27,
+    29,
+    32,
+    38,
+    32,
+    38,
+    14,
+    38,
+    29,
+    30,
+    63,
+    29,
+    63,
+    91,
+    54,
+    10,
+    63
+  ]));
 }
 
 class EqualityInArray {
@@ -17,6 +45,7 @@ class EqualityInArray {
         maxKey = key;
       }
     });
+    /// we can replace this for loop with (return arr.length - maxVal)
     for (var i = 0; i < arr.length; i++) {
       if (arr[i] != maxKey) {
         noOfDeletion++;
