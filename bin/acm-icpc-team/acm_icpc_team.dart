@@ -1,11 +1,38 @@
 void main(List<String> args) {
-  
+  print(AcmIcpcTeam.acmTeam(["10101", "11100", "11010", "00101"]));
 }
-class AcmIcpcTeam {
-       static List<int> acmTeam(List<String> topic) {
-    // Write your code here
 
+class AcmIcpcTeam {
+  static List<int> acmTeam(List<String> topic) {
+    List<int> res =
+        []; // res[0] max no of subject, res[1] no of team with that no of subject
+    int maxNumberOfKnownTopics = 0;
+    int numberOfTeamsWithMaxNumberOfKnownTopics = 0;
+    int knownTopicCount = 0;
+    String s1 = "";
+    String s2 = "";
+    for (var i = 0; i < topic.length; i++) {
+      for (var j = i + 1; j < topic.length; j++) {
+        s1 = topic[i];
+        s2 = topic[j];
+        for (var k = 0; k < s1.length; k++) {
+          if (s1[k] == "1" || s2[k] == "1") {
+            knownTopicCount++;
+          }
+        }
+        if (knownTopicCount > maxNumberOfKnownTopics) {
+          maxNumberOfKnownTopics = knownTopicCount;
+          numberOfTeamsWithMaxNumberOfKnownTopics = 1;
+        } else if (maxNumberOfKnownTopics == knownTopicCount) {
+          numberOfTeamsWithMaxNumberOfKnownTopics++;
+        }
+        knownTopicCount = 0;
+      }
     }
+    res.add(maxNumberOfKnownTopics);
+    res.add(numberOfTeamsWithMaxNumberOfKnownTopics);
+    return res;
+  }
 }
 /**
   Submissions	Leaderboard	Discussions	Editorial	Topics
