@@ -7,7 +7,7 @@ class BeautifulTriplets {
     int tripletCounter = 0;
     for (var i = 0; i < arr.length; i++) {
       int x = arr[i] + d;
-      if (arr.contains(arr[i] + d) && arr.contains(x + d)) {
+      if (arr.contains(x) && arr.contains(x + d)) {
         tripletCounter++;
       }
     }
