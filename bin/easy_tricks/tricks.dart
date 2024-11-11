@@ -16,10 +16,10 @@ List<Person> persons = [
 ];
 List<Person> list = values.entries.map((e) => Person(e.key, e.value)).toList();
 /// list equal persons with different syntax
-// Map<String, int> person = {for (var item in persons) item.name: item.age};
+Map<String, int> person = {for (var item in persons) item.name: item.age};
 
 
-Map<String, int> map = {for (var person in persons) person.name: person.age};
+// Map<String, int> map = {for (var person in persons) person.name: person.age};
 
 void main() {
   print(persons[1].name);

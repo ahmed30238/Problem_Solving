@@ -5,12 +5,26 @@
  ex => [4, 4, 1, 3]the maximum height candles are 4 units high, there are two of them, so return 2.
  */
 void main(List<String> args) {
-  print(BirthdayCandles.birthDayCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36]));
+  print(BirthdayCandles.birthDayCandles(
+      [4,4,1,3]));
 }
 
 class BirthdayCandles {
   static int birthDayCandles(List<int> arr) {
     // This is another solution
+    // arr.sort();
+    // int i = arr.length - 1;
+    // int counter = 1;
+    // while (arr[i] == arr[i - 1]) {
+    //   counter++;
+    //   if (i == 0) {
+    //     break;
+    //   }
+    //   i--;
+    // }
+    // return counter;
+
+    //! sol 2 
     Map<int, int> candles = {};
     int theValue = 0;
     // var theKey = 0;
@@ -25,6 +39,7 @@ class BirthdayCandles {
       }
     });
     return theValue;
+    //! sol 3
     // List<int> tallestCandles = [];
     // arr.sort();
     // for (var i = arr.length - 1; i > 0;) {
