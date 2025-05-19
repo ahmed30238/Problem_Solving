@@ -1,11 +1,25 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // import 'package:problem_solving/problem_solving.dart' as problem_solving;
 
 import 'dart:core';
 
 void main(List<String> arguments) {
-  print(Graph(
-    4
-  ).shortestPaths(1));
+
+  AAA a = AAA();
+  a._name = "sdds";
+  print(a._name);
+}
+class AAA {
+  String? _name;
+  // AAA(
+  //  {  this._name = "as",}
+  // );
+
+  setName(String n) {
+    _name = n;
+  }
+
+  String get name => _name ?? "";
 }
 
 class Graph {

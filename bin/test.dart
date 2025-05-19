@@ -13,6 +13,7 @@
  from right to left diagonal {(i1,m3),(i2,m2),(i3,m1)}
  */
 
+
 class DiagonalSum {
   int leftToRightSum = 0;
   int rightToLeftSum = 0;
