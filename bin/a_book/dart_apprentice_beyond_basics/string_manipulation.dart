@@ -84,7 +84,7 @@ class StringManipulation {
     // const name = "Ahmed";
     // string += name;
     // print(string);
-    final message = StringBuffer();
+    // final message = StringBuffer();
     // message.write("Hello ");
     // message.write("My Name Is ");
     // message.write("Ahmed");
